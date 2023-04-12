@@ -1,0 +1,217 @@
+<DOCTYPE! html>
+<html lang = "EN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Payment Platform</title>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css"/>
+      </head>
+      <body>
+
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">SWOOSH</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#Home-section">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About-section">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact-section">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Signup-section">Sign up</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      
+        <!-- Hero section -->
+        <section class="jumbotron text-center" id="Home-section">
+          <div class="container">
+            <h1 class="jumbotron-heading">Secure and easy online payments</h1>
+            <p class="lead">Our payment platform makes it easy for businesses and individuals to accept payments online.</p>
+            <p>
+              <a href="#" class="btn btn-primary my-2">Get started</a>
+            </p>
+          </div>
+        </section>
+      
+        <!-- Features section -->
+        <section class="py-5" id="About-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <div class="card-body">
+                    <h4 class="card-title">Accept multiple payment methods</h4>
+                    <p class="card-text">Our payment platform supports credit and debit cards, bank transfers, and e-wallets.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <div class="card-body">
+                    <h4 class="card-title">Fast and easy setup</h4>
+                    <p class="card-text">Get started with our payment platform in minutes with our simple setup process.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <div class="card-body">
+                    <h4 class="card-title">Secure payment processing</h4>
+                    <p class="card-text">Our payment platform uses industry-standard security measures to protect your data and transactions
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              </section>
+            
+              <!-- Payment form section -->
+              <section class="py-5">
+                  <div class="form-body">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="card mb-4 box-shadow">
+                            <div class="card-body">
+                      <form id="payment-form">
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" class="form-control" id="card-number" placeholder="Enter card number">
+        </div>
+        <div class="form-group">
+          <label for="expiration-date">Expiration Date</label>
+          <input type="text" class="form-control" id="expiration-date" placeholder="MM / YY">
+        </div>
+        <div class="form-group">
+          <label for="cvc">CVC</label>
+          <input type="text" class="form-control" id="cvc" placeholder="Enter CVC">
+        </div>
+        <div class="form-group">
+          <label for="name-on-card">Name on Card</label>
+          <input type="text" class="form-control" id="name-on-card" placeholder="Enter name on card">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Payment</button>
+      </form>
+                </div> 
+              </div> 
+            </div> 
+          
+              <!-- Crypto payment section -->
+          <div class="col">
+            <div class="col-md-9">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+            <h2 class="mb-4">Pay with Cryptocurrency</h2>
+            <p>Use our crypto payment option to pay with Bitcoin, Ethereum, or other popular cryptocurrencies.</p>
+            <form id="crypto-payment-form">
+              <div class="form-group">
+                <label for="crypto-type">Select cryptocurrency</label>
+                <select class="form-control" id="crypto-type" required>
+                  <option value="">Choose...</option>
+                  <option value="Bitcoin">Bitcoin</option>
+                  <option value="Ethereum">Ethereum</option>
+                  <option value="Litecoin">Litecoin</option>
+                  <option value="Dogecoin">Dogecoin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="crypto-amount">Amount</label>
+                <input type="number" class="form-control" id="crypto-amount" placeholder="Enter amount" required>
+              </div>
+              <div class="form-group">
+                <label for="crypto-wallet">Wallet address</label>
+                <input type="text" class="form-control" id="crypto-wallet" placeholder="Enter wallet address" required>
+              </div>
+              <button id="payment" type="submit" class="btn btn-primary">Submit Payment</button>
+            </form>
+          </div> 
+          </div>
+        </div>
+          </div>
+          </div>
+      </section>
+
+      <section class="jumbotron text-center" id="Contact-section">
+        <div class="container">
+          <h1 class="jumbotron-heading">Contact us</h1>
+          <p class="lead">07323232</p>
+        
+          <div id="complaints">
+            <h2>Submit a Complaint</h2>
+            <form id="complaint-form" action="https://www.example.com/submit-complaint">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+          
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" required>
+              <div>
+                <label for="message">Message:</label>
+              <textarea id="message" calss="message" name="message" required></textarea>
+              </div>
+              
+              <div>
+                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+              </div>
+              
+            </form>
+            
+          </div>
+      </section>
+
+      <script>
+        // Connect to the user's Ethereum wallet
+        if (typeof web3 !== 'undefined') {
+          web3 = new Web3(web3.currentProvider);
+        } else {
+          alert("Please install MetaMask to use this payment platform");
+        }
+    
+        // Function to process the payment
+        function processPayment() {
+          // Retrieve payment information from the form
+          var name = document.forms[0]["name"].value;
+          var email = document.forms[0]["email"].value;
+          var amount = document.forms[0]["amount"].value;
+    
+          // Get the user's Ethereum account
+          web3.eth.getAccounts(function(error, accounts) {
+            if (error) {
+              alert(error);
+            } else {
+              // Create a new transaction on the Ethereum network
+              web3.eth.sendTransaction({
+                from: accounts[0],
+                to: '0x1234567890123456789012345678901234567890', // Replace with your own Ethereum address
+                value: web3.utils.toWei(amount, 'ether')
+              }, function(error, result) {
+                if (error) {
+                  alert(error);
+                } else {
+                  // Display a confirmation message to the user
+                  alert("Payment processed successfully!");
+                }
+              });
+            }
+          });
+        }
+      </script>
+      </body>
+      </html>
