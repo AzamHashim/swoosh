@@ -7,4 +7,6 @@ My target for this platform
   2.  secure transaction
   3.  simple website
   4.  run smoothly
-I hope everyone can guide me so i can be better in coding.
+  5.  user can earn while using the swoosh
+     
+
